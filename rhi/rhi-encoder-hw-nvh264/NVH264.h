@@ -12,6 +12,8 @@
 #include <iostream>
 #include <sstream>
 #include "x264Encoder.h"
+#include <Util.h>
+
 
 class NVH264
 {
@@ -24,13 +26,6 @@ private:
 	NvFBCToSys *sysFramer;
 	x264Encoder* sEncoder;
 	int Init();
-	  
-
-
-
-
-
-
 public:
 	//static const char * getHeader();
 	NVH264();

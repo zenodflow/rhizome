@@ -14,6 +14,7 @@
     <ProjectGuid>{D4361E4F-6BA4-4009-916E-8ED848FB9CE1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>rtpStream</RootNamespace>
+    <ProjectName>rhizome</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -38,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -50,13 +51,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\My Code\rtpStream\inc\NvFBC;D:\My Code\rtpStream\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc\NvFBC;..\inc;.\rhi-audio;.\rhi-encoder-hw-nvh264;.\rhi-encoder-sw-x264;.\rhi-server-live555;.\rhi-utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\My Code\rtpStream\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libBasicUsageEnvironment.lib;libgroupsock.lib;libliveMedia.lib;libUsageEnvironment.lib;libWindowsAudioInputDevice_mixer.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>..\lib;libBasicUsageEnvironment.lib;libgroupsock.lib;libliveMedia.lib;libUsageEnvironment.lib;libWindowsAudioInputDevice_nomixer.lib;winmm.lib;ws2_32.lib;swscale.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;swresample.lib;libx264.lib;libconfig++.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,7 +69,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\inc;..\inc\NvFBC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\inc;..\inc\NvFBC;.\rhi-utils;.\rhi-audio;.\rhi-encoder-hw-nvh264;.\rhi-encoder-sw-x264;.\rhi-server-live555;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,17 +81,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AudioCapture.cpp" />
-    <ClCompile Include="x264Encoder.cpp" />
-    <ClCompile Include="LiveSourceWithx264.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NVH264.cpp" />
+    <ClCompile Include="rhi-audio\AudioCapture.cpp" />
+    <ClCompile Include="rhi-encoder-hw-nvh264\NVH264.cpp" />
+    <ClCompile Include="rhi-encoder-sw-x264\x264Encoder.cpp" />
+    <ClCompile Include="rhi-server-live555\H264LiveServerMediaSession.cpp" />
+    <ClCompile Include="rhi-server-live555\LiveSourceWithx264.cpp" />
+    <ClCompile Include="rhi-utils\Util.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AudioCapture.h" />
-    <ClInclude Include="x264Encoder.h" />
-    <ClInclude Include="LiveSourceWithx264.h" />
-    <ClInclude Include="NVH264.h" />
+    <ClInclude Include="rhi-audio\AudioCapture.h" />
+    <ClInclude Include="rhi-encoder-hw-nvh264\NVH264.h" />
+    <ClInclude Include="rhi-encoder-sw-x264\X264Encoder.h" />
+    <ClInclude Include="rhi-server-live555\H264LiveServerMediaSession.h" />
+    <ClInclude Include="rhi-server-live555\LiveSourceWithx264.h" />
+    <ClInclude Include="rhi-utils\Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

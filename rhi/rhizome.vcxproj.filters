@@ -18,31 +18,43 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LiveSourceWithx264.cpp">
+    <ClCompile Include="rhi-server-live555\H264LiveServerMediaSession.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NVH264.cpp">
+    <ClCompile Include="rhi-server-live555\LiveSourceWithx264.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="x264Encoder.cpp">
+    <ClCompile Include="rhi-encoder-sw-x264\x264Encoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AudioCapture.cpp">
+    <ClCompile Include="rhi-encoder-hw-nvh264\NVH264.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rhi-audio\AudioCapture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rhi-utils\Util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LiveSourceWithx264.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="rhi-server-live555\H264LiveServerMediaSession.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NVH264.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="rhi-server-live555\LiveSourceWithx264.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="x264Encoder.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="rhi-encoder-sw-x264\X264Encoder.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AudioCapture.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="rhi-encoder-hw-nvh264\NVH264.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rhi-audio\AudioCapture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rhi-utils\Util.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
