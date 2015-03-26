@@ -36,6 +36,9 @@
     <ClCompile Include="rhi-utils\Util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rhi-server\RhiServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rhi-server-live555\H264LiveServerMediaSession.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="rhi-utils\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rhi-server\RhiServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
