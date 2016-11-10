@@ -1,8 +1,6 @@
 # Rhizome
-Rhizome is a modularized cloud gaming platform based on public cloud.
-==
 
-For more technical details of Rhizome platform, please check our research papers:
+Rhizome is a modularized cloud gaming platform based on public cloud. For more technical details of Rhizome platform, please check our research papers:
 
 [Rhizome: utilizing the public cloud to provide 3D gaming infrastructure, ACM MMSys
 15](https://www.google.com)
