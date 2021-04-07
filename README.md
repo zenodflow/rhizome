@@ -9,4 +9,4 @@ Rhizome is a modularized cloud gaming platform designed for public cloud. For mo
 
 * [Cloud Gaming: Understanding the Support From Advanced Virtualization and Hardware, IEEE Transactions on Circuits and Systems for Video Technology, Dec. 2015](http://ieeexplore.ieee.org/document/7137668/)
 
-Authors: Dr. Ryan Shea, Silvery Fu (committer), and Dr. Jiangchuan Liu.
+Authors: **Dr. Ryan Shea**, Silvery Fu (committer), and Dr. Jiangchuan Liu.
